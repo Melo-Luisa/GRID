@@ -1,0 +1,84 @@
+.caixa{
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+.destaques{
+    display: grid;
+    /*add espaço de uma linha para outra*/
+    grid-gap:.2rem ;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33% 33.33%;
+    height: calc(100vh  - 50px);
+}
+.destaques__titulo{
+    /*deixa com opacidade baixa*/
+    background: rgba(0, 0, 0, .5);
+    /*cor da palavra*/
+    color: #fdfdfd;
+    padding: .6rem;
+    text-align: center;
+    /*ocupa a palavra toda de acordo cm as separações*/
+    width: 100%;
+}
+.destaques__principal{
+    /*pega aimagem*/
+    background-image: url('../img/fortnite.jpg');
+    /*não repetir a imagem*/
+    background-repeat: no-repeat;
+    /*posição na imagem de acordo com os grids*/
+    background-position: center;
+    /*cobrir todo o local designado*/
+    background-size: cover;
+    /*onde a imagem começa na hori*/
+    grid-column-start: 1;
+    /*termina*/
+    grid-column-end: 4;
+    /*começa na verti*/
+    grid-row-start: 1;
+    /*termina*/
+    grid-row-end: 3;
+}
+/*puxar o filho necessário*/
+.destaques__secundario:nth-child(2){
+    background: url('../img/pubg.jpg') center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 1 / 1;
+}
+.destaques__secundario:nth-child(3){
+    background: url('../img/slack.png') center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 2 / 2;
+}
+.destaques__secundario:nth-child(4){
+    background: url('../img/whatsapp.png') center / cover no-repeat;
+    grid-column: 4 / 4;
+    grid-row: 3 / 3;
+}
+.destaques__secundario:nth-child(5){
+    background: url('../img/cs-go.jpg') center / cover no-repeat;
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+}
+.destaques__categorias{
+    grid-row: 3 / 3;
+}
+.destaques__categorias___lista{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+
+}
+.destaques__categorias___item{
+    align-items: center;
+    background:  #fdfdfd;
+    border-left: 5px solid transparent;
+    color: #333333;
+    display: flex;
+    padding: 1rem;
+    width: 50%;
+}
+.destaques__categorias___link{
+    color: inherit;
+}
